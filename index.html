@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="BdEeecMA1AD6A4KuMrI6V0">
+<head data-page-node-id="VbYJZyWm4RAmzAjfimukT6">
+<meta charset="UTF-8" data-page-node-id="eD7WFDQx40jDkXnCT3CKDg">
+<meta name="viewport" content="width=device-width,initial-scale=1" data-page-node-id="QZlmaMnXzSdgtvvwkHukIi">
+<title>王云龙 · 个人简历</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0A1628; --bg2:#0D1F35; --panel:#12253F; --panel2:#173058;
+  --line:#1E3A5F; --txt:#E6EEF7; --sub:#93A9C4; --dim:#5F7A9E;
+  --blue:#2563EB; --cyan:#0EA5A4; --gold:#E0A128; --red:#E05252;
+}
+html{scroll-behavior:smooth}
+body{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;background:linear-gradient(160deg,var(--bg2),var(--bg) 60%);color:var(--txt);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:auto;padding:0 28px}
+
+/* print */
+@media print{
+  body{background:#fff;color:#111}
+  .nav,.hero-btn,.float-open,.no-print{display:none!important}
+  .sec{break-inside:avoid}
+  .card,.box,.proj{background:#fff!important;border-color:#ccc!important;color:#111!important}
+  a{color:#111!important}
+}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(10,22,40,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:17px;display:flex;align-items:center;gap:10px}
+.logo .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;font-size:15px;color:#fff}
+.navlinks{display:flex;gap:22px;font-size:14px;color:var(--sub)}
+.navlinks a:hover{color:var(--cyan)}
+.open-portfolio{padding:8px 16px;border:1px solid var(--blue);border-radius:8px;color:#fff;background:var(--blue);font-size:13px;font-weight:700;transition:.2s}
+.open-portfolio:hover{background:#1d4fd8;transform:translateY(-1px)}
+
+/* hero */
+.hero{padding:56px 0 40px;display:grid;grid-template-columns:1fr 250px;gap:40px;align-items:center}
+.tag{display:inline-block;font-size:13px;color:var(--cyan);border:1px solid var(--cyan);padding:5px 12px;border-radius:20px;margin-bottom:18px}
+.tag .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);margin-right:7px;box-shadow:0 0 8px var(--cyan)}
+.hero h1{font-size:52px;line-height:1.15;font-weight:900;letter-spacing:-1px}
+.hero h1 .name{background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{font-size:19px;color:var(--sub);margin:12px 0 18px;font-weight:600}
+.lead{font-size:15px;color:var(--sub);max-width:640px}
+.lead strong{color:var(--txt)}
+.contact{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+.contact span{font-size:13px;background:var(--panel);border:1px solid var(--line);padding:7px 12px;border-radius:8px;color:var(--sub)}
+.contact b{color:var(--cyan)}
+.hero-btn{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:11px 22px;border-radius:9px;font-weight:700;font-size:14px;cursor:pointer;display:inline-block;transition:.2s}
+.btn.primary{background:linear-gradient(135deg,var(--blue),#1d4fd8);color:#fff}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,99,235,.4)}
+.btn.ghost{border:1px solid var(--line);color:var(--sub)}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.avatar-lg{width:220px;height:280px;border-radius:16px;border:2px solid var(--blue);overflow:hidden;position:relative;background:var(--panel);box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.avatar-lg img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* section */
+.sec{padding:38px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.sec-title{font-size:25px;font-weight:800;display:flex;align-items:center;gap:12px}
+.sec-title .no{font-size:14px;color:var(--cyan);font-weight:800;border:1px solid var(--cyan);border-radius:6px;padding:2px 8px}
+.sec-desc{font-size:13px;color:var(--dim);margin-left:auto}
+
+/* generic box */
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 26px}
+.box p{color:var(--sub);font-size:14.5px;margin-bottom:12px}
+.box p strong{color:var(--txt)}
+.box p:last-child{margin-bottom:0}
+
+/* edu */
+.edu{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.edu .school{font-size:17px;font-weight:700}
+.edu .major{color:var(--cyan);font-size:14px;margin-top:4px}
+.edu .time{color:var(--dim);font-size:13px;text-align:right;white-space:nowrap}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.skill-row{display:flex;gap:12px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+.skill-row .k{color:var(--cyan);font-size:13px;font-weight:700;min-width:76px}
+.skill-row .v{color:var(--sub);font-size:13.5px}
+
+/* awards list */
+.awards{display:grid;gap:10px}
+.award{display:flex;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:12px 16px}
+.award img{width:46px;height:46px;object-fit:cover;border-radius:7px;flex:none;background:#fff}
+.award .body{flex:1}
+.award .t{font-size:14px;font-weight:600}
+.award .role{font-size:12px;color:var(--dim);margin-top:3px}
+.badge{font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:20px;white-space:nowrap;flex:none}
+.badge.nat{background:rgba(224,82,82,.15);color:#ff7a7a;border:1px solid rgba(224,82,82,.4)}
+.badge.prov{background:rgba(224,161,40,.15);color:var(--gold);border:1px solid rgba(224,161,40,.4)}
+.badge.sch{background:rgba(14,165,164,.15);color:#3fd6d4;border:1px solid rgba(14,165,164,.4)}
+
+/* patents */
+.patent{display:flex;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 16px;margin-bottom:10px}
+.patent .ic{width:34px;height:34px;border-radius:9px;background:rgba(14,165,164,.14);display:grid;place-items:center;flex:none;font-size:16px}
+.patent .t{font-size:14px;font-weight:600}
+.patent .info{font-size:12px;color:var(--dim);margin-top:3px}
+.tag-first{font-size:11px;color:var(--gold);border:1px solid var(--gold);border-radius:5px;padding:1px 7px;margin-left:8px}
+
+/* projects */
+.proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.proj{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;display:flex;flex-direction:column}
+.proj .cover{height:150px;position:relative;background:#081426;overflow:hidden}
+.proj .cover img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.proj .tag{position:absolute;left:12px;top:12px;margin:0;font-size:11px;padding:3px 9px;background:rgba(10,22,40,.75);backdrop-filter:blur(4px)}
+.proj .body{padding:15px 17px 17px}
+.proj h3{font-size:15.5px;font-weight:700;margin-bottom:3px}
+.proj .role{font-size:12px;color:var(--cyan);margin-bottom:8px}
+.proj p{font-size:12.5px;color:var(--sub)}
+.techs{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.tech{font-size:11px;color:var(--sub);background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:2px 8px}
+
+/* self */
+.self{font-size:14.5px;color:var(--sub)}
+.float-open{position:fixed;right:26px;bottom:26px;z-index:30;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;font-weight:800;font-size:14px;padding:14px 22px;border-radius:30px;box-shadow:0 10px 30px rgba(37,99,235,.5);transition:.2s}
+.float-open:hover{transform:translateY(-3px)}
+footer{border-top:1px solid var(--line);padding:26px 0 90px;color:var(--dim);font-size:13px;text-align:center}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr}.avatar-lg{width:180px;height:230px}
+  .skills,.proj-grid{grid-template-columns:1fr}.navlinks{display:none}
+  .hero h1{font-size:38px}.sec-desc{display:none}
+}
+</style>
+</head>
+<body data-page-node-id="wWbW6WLGRNDmGlD7dvXrRi">
+
+<nav class="nav" data-page-node-id="VcoOygVeqtnZDSGh1ZOawX"><div class="wrap" data-page-node-id="7MWbIyHVhVHFuwxtQ6JiPz">
+  <div class="logo" data-page-node-id="JomZDrdpyEpf0JOgBbjFtz"><span class="mark" data-page-node-id="hRPnCi4I9DnU48KLGUTop0">云</span>王云龙 · 个人简历</div>
+  <div class="navlinks" data-page-node-id="UcjBwLmpQpU7eDSN0ctiuW">
+    <a href="#about" data-page-node-id="v1HEuRLkiYJvO1ItQ5Bml1">关于</a><a href="#edu" data-page-node-id="pkUln3AryVPMa3kkYm54r9">教育</a><a href="#skills" data-page-node-id="8mqxywvpWz7pkKtdGsA3Qv">技能</a>
+    <a href="#awards" data-page-node-id="BczulK3updMK7L54urbKrW">奖项</a><a href="#projects" data-page-node-id="o6PfPGiwlPZCBJk3vt5bgR">项目</a>
+  </div>
+  <a class="open-portfolio" href="wangyunlong-portfolio.html" data-online target="_blank" data-page-node-id="EOKmSeDQKwUd4FZlsmTac5">打开完整作品集 ↗</a>
+</div></nav>
+
+<header class="hero wrap" data-page-node-id="fqeQYvi9hkKOet6ZSRcoin">
+  <div data-page-node-id="8rtqu8mB4wU8ZO8sS2uTFA">
+    <span class="tag" data-page-node-id="HlmYDpZi4rsvxyrHSQK9qU"><span class="dot" data-page-node-id="Q8hK6qUic7P1Gzp4beCLLy"></span>广州铁路职业技术学院 · 人工智能学院 · 人工智能 24-3 班</span>
+    <h1 data-page-node-id="ANYSc0zQc5a2Frmabqoc2N">你好，我是<span class="name" data-page-node-id="ixyWhFnEIBco687DBbXVTn">王云龙</span></h1>
+    <div class="subtitle" data-page-node-id="gUnIoLAofAI4k8fLXHfD6M">人工智能应用工程 · 视觉 / 信号 / 全栈 / 嵌入式</div>
+    <p class="lead" data-page-node-id="gRsJSoCLgHkD6hwcSspER5">把算法模型做成<strong data-page-node-id="nHE6dqj6rnIO5FHZSU2CSY">真正能跑、能交付、能参赛落地</strong>的系统。从数据采集到模型推理，从后端接口到界面部署，习惯走完整条链路。在校期间累计获<strong data-page-node-id="ErbFUHnASeiiz5OhCwRLeN">国家级奖项 4 项</strong>（含世界职业院校技能大赛金牌），产出<strong data-page-node-id="Jv5nQYASS9jV53QsyqyI1B">4 项发明专利 + 1 项软著</strong>。</p>
+    <div class="contact" data-page-node-id="Z0BWIxAOSlPNTTYURwRUrl">
+      <span data-page-node-id="QODN3Ff2qclNyEWaZrg32P">📱 <b data-page-node-id="TaTHxCR93luWR2PArnqHxR">15397329455</b></span>
+      <span data-page-node-id="iVU9SVJ0E6G9SizwEdcVAS">📍 广东 · 广州</span>
+      <span data-page-node-id="ruKE7Yeoe3sXyL1GM7P4Pv">🎓 大专 · 2024.09 入学 · 3 年制</span>
+    </div>
+    <div class="hero-btn" data-page-node-id="ACtA3c4FSbhrUTImo6NmaZ">
+      <a class="btn primary" href="wangyunlong-portfolio.html" data-online target="_blank" data-page-node-id="hVMjB7D69zf158QEbAs4BR">打开在线作品集 →</a>
+      <a class="btn ghost" href="#projects" data-page-node-id="7LT7ZXifi6VMrBGIJku3Gh">浏览项目作品</a>
+    </div>
+  </div>
+  <div class="avatar-lg" data-page-node-id="tBJleOoGg9OHoLMKvEDsUO"><img src="assets/photo.jpg" alt="王云龙证件照" data-page-node-id="zEj2QGx7E8P8ebvsM1DF3l"></div>
+</header>
+
+<section class="sec wrap" id="about" data-page-node-id="qaDLkmbTSaWS36uqd1nBf0">
+  <div class="sec-head" data-page-node-id="SD8NOU08kSPCGc7cUquPi6"><div class="sec-title" data-page-node-id="x6f0BfNW9vxFfGMviBJptV"><span class="no" data-page-node-id="wzoHT4wKuPRjK2VsANtFkk">01</span>自我介绍</div></div>
+  <div class="box" data-page-node-id="nJgc2siBOf9IGlLX6QkXcR">
+    <p data-page-node-id="Irk0xT2N613ToG43ZQGjme">我是王云龙，广州铁路职业技术学院人工智能学院人工智能 24-3 班学生，方向是<strong data-page-node-id="H1a7bTnp1pQ74DLreo28PL">人工智能应用工程</strong>——把计算机视觉、信号处理和大模型技术，做成真正能跑、能交付、能参赛落地的系统。</p>
+    <p data-page-node-id="1hKknvJM8Uyazo3q3Hswgs">在<strong data-page-node-id="UeQaR76yppywhtzWx7g2hY">视觉方向</strong>，用 YOLO / ONNX Runtime 做工业零件检测、PCB 缺陷核验、产线 SOP 合规判断，也做过基于 SAM2 的图像智能分割和自研标注—训练一体化工具链；在<strong data-page-node-id="AhBcFHmIXdYrr0pDvKZ77z">生理信号方向</strong>，参与《轨心依在——铁路人员非接触式生命体征监测系统》，用 BCG 心冲击图 + 深度学习做心率检测和异常预警，产出 4 项发明专利受理 + 1 项软件著作权受理；在<strong data-page-node-id="xSZ52pExMmTlG72Sv6X0dA">嵌入式与机器人方向</strong>，做过去掉电脑依赖的罐盖焊接检测（4 路麦克风 + FFT，1.2 秒判定）、毫米波雷达体征监测、ROS 人脸跟随机器人；在<strong data-page-node-id="HDbtkKenLUXolJg3Sd1d3o">全栈与平台方向</strong>，独立交付过物品出入库管理平台、车轮虫智能检测云平台、MLTrainer 训练工作台等系统。</p>
+    <p data-page-node-id="qECKTHqORvPuyomsE496C5">我习惯"<strong data-page-node-id="YmBX9qEjnJqgqYdgTGWpgI">先把系统跑通，再谈架构漂亮</strong>"。踩过的坑——跨线程卡顿、外参标定秩亏、ONNX 部署 DLL 报错——让我养成了看数据、看日志、查根因的习惯。团队里我通常是那个愿意把脏活累活扛下来、把方案做到能演示的人。</p>
+  </div>
+</section>
+
+<section class="sec wrap" id="edu" data-page-node-id="ep0UAu1kgBoJCCNDlfTFsa">
+  <div class="sec-head" data-page-node-id="ueuNjM50kLjO9CMDLOXCwX"><div class="sec-title" data-page-node-id="EQI6aEqbPHgvCpc43gbOrR"><span class="no" data-page-node-id="0kvhlRan5p6bXuELpRBv2c">02</span>教育背景</div></div>
+  <div class="box edu" data-page-node-id="aXDEC0AsEDmuc239oFBYxL">
+    <div data-page-node-id="qS8C0u4SZ4NiZnlzqJ0Blr"><div class="school" data-page-node-id="myqLUxvCFxrINytIh0azy0">广州铁路职业技术学院（广州铁路机械学校）</div><div class="major" data-page-node-id="avWyR07K8r9WrKISKRsaRu">人工智能学院 · 人工智能技术应用 · 人工智能 24-3 班</div></div>
+    <div class="time" data-page-node-id="zilfsG7MlQq0Ps76eWqdk0">2024.09 — 至今<br data-page-node-id="bI9RkLvy0H6jBbjXYXeQ1H">大专在读 · 3 年制</div>
+  </div>
+</section>
+
+<section class="sec wrap" id="skills" data-page-node-id="RvDk0HbeO3Rh1W8kGkfHDV">
+  <div class="sec-head" data-page-node-id="xlIQtcPFfgPrDazKEKDXL0"><div class="sec-title" data-page-node-id="jp0RoA2l8AfeCUtgvFhoS0"><span class="no" data-page-node-id="LtAH0FxOTJGLjGZMIIwKmd">03</span>专业技能</div></div>
+  <div class="skills" data-page-node-id="3sHLosEwjkWwNmZPChrbg5">
+    <div class="skill-row" data-page-node-id="SplsZvna18GCvN4AElqScD"><span class="k" data-page-node-id="M0AAUuscwdZCKFmoBvFG2X">编程语言</span><span class="v" data-page-node-id="HmRxCUl7Nrv3bpxHnhAoXS">Python（主力）、C、JavaScript、SQL</span></div>
+    <div class="skill-row" data-page-node-id="u70QFKw4kxNBax0YEg56FN"><span class="k" data-page-node-id="VDNukBoMqTgX0DELsuWFoq">深度学习</span><span class="v" data-page-node-id="PLQOQYn9WXEHUL2hXKvoLj">YOLOv8/11、UNet、BiLSTM、GAN、SAM2、transformers</span></div>
+    <div class="skill-row" data-page-node-id="hA4YLSCwCsLgx3Bzg1osQ6"><span class="k" data-page-node-id="ZjPTeUKqs5rmVnV4LqF73w">传统视觉</span><span class="v" data-page-node-id="WgIgKHpPSDOAt69mUOhkGC">OpenCV、FFT、数字滤波、标定、ONNX Runtime 部署</span></div>
+    <div class="skill-row" data-page-node-id="l2GdvlBZRDbQqBs8dFahNu"><span class="k" data-page-node-id="cOa1yPD5BUgWVhVEGYxRLK">桌面 GUI</span><span class="v" data-page-node-id="1G22vxDTMKvS59Bc4qa5PN">PySide6 / PyQt5、Qt Designer、Qt 多线程与信号槽</span></div>
+    <div class="skill-row" data-page-node-id="rAHdmp5lSeOjcqaC5zY5pN"><span class="k" data-page-node-id="BvSI1QbF45hqguPMzt1Mcu">Web 全栈</span><span class="v" data-page-node-id="kEy1DbaDOVfLbMGPXUzwsh">FastAPI、SQLite、WebSocket、原生 JS、ECharts</span></div>
+    <div class="skill-row" data-page-node-id="qNI1DXqIQm9bWG2Q90AaHD"><span class="k" data-page-node-id="Uk2EXAkn8RLafQoiYOSHr4">嵌入式 / 机器人</span><span class="v" data-page-node-id="Ra9RP6k0afqAuz0wasMOuQ">ESP32、STM32、ROS、毫米波雷达、Mercury X1 机械臂</span></div>
+    <div class="skill-row" data-page-node-id="6NAn4qTh4BqBY7e1EL6hL2"><span class="k" data-page-node-id="gb6Lkp1tauCqcjNYUy7JjS">工程化</span><span class="v" data-page-node-id="nwxRiYWkbjbHaiQVjFptsc">Git、PyInstaller、单元测试、日志与看板、Docker 基础</span></div>
+    <div class="skill-row" data-page-node-id="V3gnZoEF7yDjoHIkAmtnPX"><span class="k" data-page-node-id="DyCInkFxMnayHJUhrFKECv">AI 辅助</span><span class="v" data-page-node-id="KvTro1oI4TH7fhzEzhEPa3">主流 Vibe Coding / AI 辅助开发工具提升效率</span></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="awards" data-page-node-id="idkagjjemx6VCdFPBamNHz">
+  <div class="sec-head" data-page-node-id="puLEUiMiGHDU3NCltXmqtW"><div class="sec-title" data-page-node-id="G9ylHU2LSXvmc15Cng7fLf"><span class="no" data-page-node-id="lPUjR8hGjUyrDFlq46Xke1">04</span>竞赛奖项</div><div class="sec-desc" data-page-node-id="HXKujZb3GCdqe7cuSgmCez">国家级 4 项 · 省级 1 项 · 校级 2 项 · 共 7 项</div></div>
+  <div class="awards" id="awardList" data-page-node-id="H22uGAUP04TpnMyckcs98E"></div>
+</section>
+
+<section class="sec wrap" id="patents" data-page-node-id="ECncIQeTKrBXQNOr2rm5YZ">
+  <div class="sec-head" data-page-node-id="5mkF08NOqsTrB6UR0AFXzo"><div class="sec-title" data-page-node-id="8fA75VDx1liGSfWjcx9txN"><span class="no" data-page-node-id="jQ23vI16AUAJlfM0rIdW9x">05</span>知识产权</div><div class="sec-desc" data-page-node-id="e0ET0x9DQVbJmEsyer9zqK">4 项发明专利受理 + 1 项软件著作权受理</div></div>
+  <div id="patentList" data-page-node-id="2Aqal3dQdrf56N0Y1YGwl5"></div>
+</section>
+
+<section class="sec wrap" id="projects" data-page-node-id="bDyMZfAM0SZfhpNebKrsrz">
+  <div class="sec-head" data-page-node-id="2ePcCeB8VCTg0PAY8O0QNB"><div class="sec-title" data-page-node-id="7wJspzdylwD1ETR0CKffSz"><span class="no" data-page-node-id="5bM9d5gcqGOufEHUfdQuEH">06</span>代表性项目</div><div class="sec-desc" data-page-node-id="AaBHA7xg5ApYARbqJnZrgK">全部为真实运行界面截图 · 点击查看完整作品集</div></div>
+  <div class="proj-grid" id="projGrid" data-page-node-id="iiKypSzmACVV2yifoUxqBT"></div>
+</section>
+
+<section class="sec wrap" id="self" data-page-node-id="9Qt31gJI92fuldQQUhbYYw">
+  <div class="sec-head" data-page-node-id="eiJTjfhKDJH0zY07C8FfYs"><div class="sec-title" data-page-node-id="EmjZrVtpbbUVUP9Vb6Nj5H"><span class="no" data-page-node-id="eYUi0s8Sc1Ul0LBoU2lBCd">07</span>自我评价</div></div>
+  <div class="box self" data-page-node-id="sstBjDYvQ9jTuTEwEUhBK7">动手能力强，能把算法模型落到真实业务场景里；遇到问题先查数据、查日志、查根因，不靠猜。有团队赛经验，能在多人协作中承担关键模块。对"从 0 到 1 把系统做出来并跑稳"这件事有热情，也有把项目讲清楚、演示好的表达能力。</div>
+</section>
+
+<a class="float-open" href="wangyunlong-portfolio.html" data-online target="_blank" data-page-node-id="cyogH7OKQYZSFQBbigOd0d">打开完整作品集 ↗</a>
+
+<footer data-page-node-id="XeUsJnYADG3amAss389d6y"><div class="wrap" data-page-node-id="vbsY4dmpL0Y4I27FvXGcUH">
+  <b data-page-node-id="9CgRo31PtrvskLOwiC8hj1">王云龙 · 个人简历</b> &nbsp;|&nbsp; 广州铁路职业技术学院 人工智能学院<br data-page-node-id="KV13FjEvhwIrpIFQWkya8i">
+  <span style="color:#44618a" data-page-node-id="8RpPH9mDz0C33Rg5ymnHUZ">奖项与知识产权信息均来自学院加分证明原件 · 项目图片均为真实运行截图</span>
+</div></footer>
+
+<script>
+// ===== 在线作品集链接（换链接只改这一处）=====
+const ONLINE_URL='wangyunlong-portfolio.html';
+// 顶部/主按钮/悬浮三个入口统一指向在线链接
+document.querySelectorAll('[data-online]').forEach(a=>a.href=ONLINE_URL);
+
+const CERT='assets/certs/', SHOT='assets/shots/';
+const awards=[
+  {t:'2026 年世界职业院校技能大赛（奖牌实物）',lv:'国家级金奖',cls:'nat',img:'award_worldskills_gold.jpg'},
+  {t:'第二十五届全国大学生机器人大赛 ROBOTAC · AIROBOTIC 创新挑战赛',lv:'国家团体二等奖',cls:'nat',img:'award_robotac2.jpg'},
+  {t:'2026 年中国大学生计算机设计大赛 ·《智观芯控》',lv:'国家团体三等奖',cls:'nat',img:'award_pcb_national3.jpg'},
+  {t:'中国大学生服务外包创新创业大赛 · 企业命题类',lv:'国家团体三等奖',cls:'nat',img:'award_service_national.png'},
+  {t:'第十五届"挑战杯"专项赛',lv:'省级团体三等奖',cls:'prov',img:'award_special_cup.png'},
+  {t:'第九届"菁苗杯"暨中国国际大学生创新大赛（2026）选拔赛',lv:'校级团体一等奖',cls:'sch',img:'award_qingmiao_gold.png'},
+  {t:'第十五届"挑战杯"广东大学生创业计划竞赛校赛 ·《轨心依在》',lv:'校级团体二等奖',cls:'sch',img:'award_challenge_silver.jpg'}
+];
+document.getElementById('awardList').innerHTML=awards.map(a=>`
+ <div class="award"><img src="${CERT+a.img}" loading="lazy" onerror="this.style.visibility='hidden'">
+  <div class="body"><div class="t">${a.t}</div><div class="role">国家级 / 省级 / 校级 · 均可核验</div></div>
+  <span class="badge ${a.cls}">${a.lv}</span></div>`).join('');
+
+const patents=[
+  {t:'一种融合 UNet-BiLSTM 的 BCG 信号心动间期精准检测方法',id:'202610821795.5',first:true},
+  {t:'一种工业视觉 SOP 智能零件检测与统计装置',id:'202610792817.X'},
+  {t:'一种 BCG 心率报告的智能生成与移动预警系统及方法',id:'202610815518.3'},
+  {t:'一种基于 BiLSTM-GAN 的异常心率样本生成方法',id:'202610821602.6'}
+];
+let ph=patents.map(p=>`<div class="patent"><div class="ic">⚗</div><div><div class="t">${p.t}${p.first?'<span class="tag-first">第 1 发明人</span>':''}</div><div class="info">申请号 ${p.id} · 发明专利 · 国家知识产权局已受理</div></div></div>`).join('');
+ph+=`<div class="patent"><div class="ic" style="background:rgba(37,99,235,.14)">💾</div><div><div class="t">基于 BiGRU-FCN 的心冲击图信号实时监控系统 V1.0</div><div class="info">受理号 2026R11S0547962 · 计算机软件著作权登记 · 已受理</div></div></div>`;
+document.getElementById('patentList').innerHTML=ph;
+
+const projects=[
+  {n:'轨心依在 · 生命体征监测',r:'国赛 / 省赛项目 · BCG 信号',tag:'信号',img:'real_monitor_panel.png',tech:['UNet-BiLSTM','BiGRU-FCN','移动端预警']},
+  {n:'物品出入库管理平台',r:'独立交付 · 校园网部署',tag:'全栈',img:'wms_screen.png',tech:['FastAPI','ECharts','PyInstaller']},
+  {n:'智检云罐 · 罐盖焊接检测',r:'世界技能大赛参赛作品',tag:'嵌入式',img:'can_collect.png',tech:['FFT','Butterworth','Qt']},
+  {n:'智能质检 SOP 系统',r:'工业落地 · 六模块桌面系统',tag:'视觉',img:'real_label_preview.png',tech:['PyQt5','YOLO','SQLite']},
+  {n:'车轮虫智能检测诊断系统',r:'多端云平台 · 核心开发',tag:'全栈',img:'real_dashboard.png',tech:['FastAPI','ONNX Runtime','PySide6']},
+  {n:'MLTrainer 训练工作台',r:'架构代表作 · 双端适配',tag:'工具链',img:'real_train_page.png',tech:['PySide6','React','WebSocket']},
+  {n:'热成像体温监测 Promax',r:'软硬件结合 · 独立开发',tag:'视觉',img:'temp_live.png',tech:['PyQt5','MediaPipe','串口']},
+  {n:'云龙标注工具',r:'自研工具链 · 独立开发',tag:'工具链',img:'real_label_main.png',tech:['YOLOv8/11','ONNX','PyInstaller']}
+];
+document.getElementById('projGrid').innerHTML=projects.map(p=>`
+ <a class="proj" href="wangyunlong-portfolio.html#projects" target="_blank">
+  <div class="cover"><img src="${SHOT+p.img}" loading="lazy"><span class="tag">${p.tag}</span></div>
+  <div class="body"><h3>${p.n}</h3><div class="role">${p.r}</div>
+   <div class="techs">${p.tech.map(t=>`<span class="tech">${t}</span>`).join('')}</div></div></a>`).join('');
+</script>
+</body>
+</html>
